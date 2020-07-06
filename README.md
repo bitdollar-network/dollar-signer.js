@@ -10,9 +10,9 @@
   - [example](https://github.com/bitdollarjs/dollar-signer/blob/master/examples/transactions.js)
 
 ```javascript
-// Currently not supporting NodeJS, but supporting use as vanilla JS
+// Currently only supporting use as vanilla JS
 // Please move and use the dist/dollar-signer.min.js file.
-const BitdollarSigner = require('dollar-signer')
+// const dollarSigner = require('dollar-signer')
 const privateKey = Buffer.from('your_private_key', 'hex')
 
 const parameters = {
@@ -25,7 +25,7 @@ const parameters = {
   chainId: 8773873
 }
 
-const transaction = new BitdollarSigner(parameters)
+const transaction = new dollarSigner(parameters)
 transaction.sign(privateKey)
 const serializedTransaction = transaction.serialize()
 ```
